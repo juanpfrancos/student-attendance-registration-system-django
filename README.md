@@ -87,6 +87,7 @@ This project is under the MIT License. See the [LICENSE](LICENSE) file for more 
 ## Contact
 
 - Email: juanpfrancos@programmer.net
-- GitHub: [yourusername](https://github.com/juanpfrancos)
+- GitHub: [https://github.com/juanpfrancos](https://github.com/juanpfrancos)
+- Linkedin: [https://www.linkedin.com/in/juanpfrancos/](https://www.linkedin.com/in/juanpfrancos)
 
 ---
