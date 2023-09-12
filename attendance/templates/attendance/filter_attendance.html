@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Filter Attendance by Date</h2>
+  <form method="get" hx-get="{% url 'filter_attendance' %}">
+    <label for="date">Date:</label>
+    <input type="date" name="date" required>
+    <button type="submit" hx-trigger="click">Filter</button>
+  </form>
+  {% if filtered_attendance %}
+    <h3>Students who attended on {{ selected_date }}</h3>
+    <ul>
+      {% for attendance in filtered_attendance %}
+        <li>{{ attendance.student.name }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endblock %}

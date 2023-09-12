@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Attendance APP{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>{% block header %}Welcome to Attendance APP{% endblock %}</h1>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+       
+    </main>
+    <h2><a href="{% url 'add_student' %}">Add New Student</a></h2>
+    <h2><a href="{% url 'attendance_form' %}">Register Attendance</a></h2>
+    <h2><a href="{% url 'filter_attendance' %}">Show Attendance</a></h2>
+    <footer>
+    </footer>
+</body>
+</html>

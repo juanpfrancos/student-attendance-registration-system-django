@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Student</title>
+</head>
+<body>
+    <h1>Add New Student</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="student-name">Name:</label>
+        <input type="text" name="name" id="student-name">
+        <input type="date" name="birthday" id="birthday">
+        <button type="submit">Add Student</button>
+    </form>
+</body>
+</html>
