@@ -1,17 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Add Student</title>
-</head>
-<body>
-    <h1>Add New Student</h1>
-    <form method="post">
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="uk-background-muted uk-padding-small">
+  <h2 class="uk-card-title">Add New Student</h2>
+<div class="uk-container uk-flex uk-flex-center uk-flex-middle">
+    <form class="uk-form-stacked uk-width-1-2@m uk-width-1-1" method="post">
         {% csrf_token %}
-        <label for="student-name">Name:</label>
-        <input type="text" name="name" id="student-name">
-        <input type="date" name="birthday" id="birthday">
-        <button type="submit">Add Student</button>
+        <div class="uk-margin">
+            <label class="uk-form-label" for="username">Nombre de Usuario</label>
+            <div class="uk-form-controls">
+                <input class="uk-input" type="text" placeholder="Name" required name="name" id="student-name">
+            </div>
+        </div>
+        <div class="uk-margin">
+            <label class="uk-form-label" for="birthdate">Fecha de Nacimiento</label>
+            <div class="uk-form-controls">
+                <input class="uk-input" type="date" required name="birthday" id="birthday">
+            </div>
+        </div>
+        <div class="uk-margin">
+            <button class="uk-button uk-button-primary" type="submit">Add Student</button>
+        </div>
     </form>
-</body>
-</html>
+</div>
+</div>
+{% endblock %}

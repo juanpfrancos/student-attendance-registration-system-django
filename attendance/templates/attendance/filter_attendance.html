@@ -3,16 +3,22 @@
 {% block content %}
   <h2>Filter Attendance by Date</h2>
   <form method="get" hx-get="{% url 'filter_attendance' %}">
-    <label for="date">Date:</label>
-    <input type="date" name="date" required>
-    <button type="submit" hx-trigger="click">Filter</button>
+
+    <div class="uk-margin">
+      <div class="uk-form-controls">
+          <input class="uk-input uk-form-width-medium" type="date" name="date" required>
+      </div>
+    </div>
+    <button type="submit" hx-trigger="click" class="uk-button uk-button-primary" >Filter</button>
   </form>
   {% if filtered_attendance %}
     <h3>Students who attended on {{ selected_date }}</h3>
-    <ul>
-      {% for attendance in filtered_attendance %}
+    <div class="uk-background-muted uk-padding-small">
+      <ul class="uk-list uk-list-divider">
+        {% for attendance in filtered_attendance %}
         <li>{{ attendance.student.name }}</li>
-      {% endfor %}
-    </ul>
+        {% endfor %}
+      </ul>
+    </div>
   {% endif %}
 {% endblock %}

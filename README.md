@@ -9,7 +9,7 @@ This web application developed in Django allows users to efficiently track stude
 
 - Python with Django.
 - SQLite.
-- Puppertino CSS.
+- UIkit CSS.
 
 ## Features
 

@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>Student List</h2>
-  <ul>
+<div class="uk-background-muted uk-padding-small">
+  <h2 class="uk-card-title">Student List</h2>
+  <ul class="uk-list uk-list-divider">
     {% for student in students %}
-      <li>{{ student.name }}</li>
+    <li >{{ student.name }}</li>
     {% endfor %}
   </ul>
+</div>
 {% endblock %}
