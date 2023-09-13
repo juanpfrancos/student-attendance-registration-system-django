@@ -5,29 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Attendance APP{% endblock %}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.26/css/uikit.min.css" integrity="sha512-2v7hIBFNpNAvfcIGzIqsRb8FLQ57PXOWOkrPFBIbNrUhQYkiK+YVfOTjUWyc4loKhqr4AZ2iePTwpPCv4uYSZQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.26/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.26/js/uikit-icons.min.js"></script>
 </head>
-<div class="uk-container uk-text-center uk-padding-small">
-    <h1>{% block header %}Welcome to Attendance APP{% endblock %}</h1>
-</div>
-<div class="uk-container uk-text-center">
-    <div class="uk-child-width-1-2@m uk-child-width-1-1" uk-grid>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-                {% block content %}{% endblock %}
-            </div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-                <p uk-margin>
-                    <a class="uk-button uk-button-default" href="{% url 'add_student' %}">Add New Student</a>
-                    <a class="uk-button uk-button-default" href="{% url 'attendance_form' %}">Register Attendance</a>
-                    <a class="uk-button uk-button-default" href="{% url 'filter_attendance' %}">Show Attendance</a>
-                </p>
-            </div>
-        </div>
+<body>
+<div>
+    <button class="uk-button uk-button-default uk-float-right" type="button" uk-icon="icon: menu"></button>
+    <div uk-dropdown="animation: slide-top; animate-out: true; duration: 700">
+        <ul class="uk-nav uk-dropdown-nav">
+            <li><a href="{% url 'add_student' %}">Add New Student</a></li>
+            <li><a href="{% url 'attendance_form' %}">Register Attendance</a></li>
+            <li><a href="{% url 'filter_attendance' %}">Show Attendance</a></li>
+        </ul>
     </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.7.4/js/uikit.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.7.4/js/uikit-icons.min.js"></script>
+<div class="uk-container uk-text-center uk-clearfix uk-padding-small" style="clear: both;">
+    <h1>{% block header %}Welcome to Attendance APP{% endblock %}</h1>
+</div>
+<div class="uk-container uk-text-center uk-width-3-5@m uk-width-3-5@l">
+
+    <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+        {% block content %}{% endblock %}
+    </div>
+</div>
 </body>
 </html>
