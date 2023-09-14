@@ -6,15 +6,13 @@
     <form class="uk-form-stacked uk-width-1-2@m uk-width-1-1" method="post">
         {% csrf_token %}
         <div class="uk-margin">
-            <label class="uk-form-label" for="username">Nombre de Usuario</label>
             <div class="uk-form-controls">
                 <input class="uk-input" type="text" placeholder="Name" required name="name" id="student-name">
             </div>
         </div>
         <div class="uk-margin">
-            <label class="uk-form-label" for="birthdate">Fecha de Nacimiento</label>
             <div class="uk-form-controls">
-                <input class="uk-input" type="date" required name="birthday" id="birthday">
+                <input class="uk-input" type="date" required name="birthday" id="birthday" placeholder="Birthday">
             </div>
         </div>
         <div class="uk-margin">

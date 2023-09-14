@@ -14,7 +14,7 @@ def attendance_form(request):
             student = Student.objects.get(id=student_id)
             attendance = Attendance(student=student, date=date, attended=True)
             attendance.save()
-        return JsonResponse({'message': 'Attendance saved successfully'})
+        return redirect('/')
     students = Student.objects.all()
     return render(request, 'attendance/attendance_form.html', {'students': students})
 
