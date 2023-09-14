@@ -18,6 +18,21 @@ This web application developed in Django allows users to efficiently track stude
 - View the list of students who attended on a given date.
 - User-friendly interface for attendance tracking.
 
+## Usage
+
+1. Add students.
+   
+   https://github.com/juanpfrancos/student-attendance-registration-system-django/assets/8592062/d9472832-2ee5-4474-8f41-7355a7c09e8a
+   
+3. Select the date for which you want to record attendance and mark the checkboxes for students who attended.
+   
+   https://github.com/juanpfrancos/student-attendance-registration-system-django/assets/8592062/eae3f410-c6fe-4f36-8f32-81ce94cf8478
+
+4. Click the "Submit" button to record attendance.
+5. View the list of students who attended on a specific date in the "Reports" section of the application.
+ 
+   https://github.com/juanpfrancos/student-attendance-registration-system-django/assets/8592062/78766663-167a-4ebd-9fc5-a28d7153a379
+
 
 ## Installation
 
@@ -61,14 +76,6 @@ Below are the steps to install and run the application in your local environment
 
 7. Open your web browser and access the application at `http://localhost:8000`.
 
-## Usage
-
-1. Add students.
-3. Select the date for which you want to record attendance.
-4. Mark the checkboxes for students who attended.
-5. Click the "Submit" button to record attendance.
-6. View the list of students who attended on a specific date in the "Reports" section of the application.
-
 ## Contribution
 
 If you wish to contribute to this project, follow these steps:
@@ -89,5 +96,9 @@ This project is under the MIT License. See the [LICENSE](LICENSE) file for more 
 - Email: juanpfrancos@programmer.net
 - GitHub: [https://github.com/juanpfrancos](https://github.com/juanpfrancos)
 - Linkedin: [https://www.linkedin.com/in/juanpfrancos/](https://www.linkedin.com/in/juanpfrancos)
+
+
+
+
 
 ---
